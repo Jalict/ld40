@@ -73,7 +73,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4438265525264526}
   - component: {fileID: 212330247074573480}
-  - component: {fileID: 61100253950894384}
   m_Layer: 0
   m_Name: Airplane Sprite
   m_TagString: Untagged
@@ -91,7 +90,7 @@ GameObject:
   - component: {fileID: 4815982164638232}
   - component: {fileID: 114245987421170746}
   - component: {fileID: 50453027160423912}
-  - component: {fileID: 82549519075030778}
+  - component: {fileID: 58627874793985064}
   m_Layer: 0
   m_Name: Airplane 1
   m_TagString: Untagged
@@ -189,7 +188,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1524928614985446}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 12.82, y: -2.79, z: 0}
+  m_LocalPosition: {x: -5.06, y: -18.15, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4438265525264526}
@@ -207,7 +206,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_BackGroundColor: {r: 0.4, g: 0.60784316, b: 0.8, a: 1}
   m_NormalizedViewPortRect:
     serializedVersion: 2
     x: 0
@@ -241,7 +240,7 @@ Rigidbody2D:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1524928614985446}
-  m_BodyType: 0
+  m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -254,12 +253,12 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!61 &61100253950894384
-BoxCollider2D:
+--- !u!58 &58627874793985064
+CircleCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1414141305160598}
+  m_GameObject: {fileID: 1524928614985446}
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
@@ -267,18 +266,8 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1.3}
-    newSize: {x: 1, y: 1.3}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1.3}
-  m_EdgeRadius: 0
+  m_Radius: 0.5
 --- !u!81 &81266713614249908
 AudioListener:
   m_ObjectHideFlags: 1
@@ -286,86 +275,6 @@ AudioListener:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1088578025616410}
   m_Enabled: 1
---- !u!82 &82549519075030778
-AudioSource:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1524928614985446}
-  m_Enabled: 1
-  serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 9a2019b48feba55438ac98d2718321af, type: 3}
-  m_PlayOnAwake: 1
-  m_Volume: 0.538
-  m_Pitch: 1.84
-  Loop: 1
-  Mute: 0
-  Spatialize: 0
-  SpatializePostEffects: 0
-  Priority: 128
-  DopplerLevel: 0
-  MinDistance: 1
-  MaxDistance: 500
-  Pan2D: 0
-  rolloffMode: 0
-  BypassEffects: 1
-  BypassListenerEffects: 1
-  BypassReverbZones: 1
-  rolloffCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 2
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-    - serializedVersion: 2
-      time: 1
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  panLevelCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 2
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 0
-  spreadCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 2
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 0
-  reverbZoneMixCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 2
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 0
 --- !u!92 &92168151539953042
 Behaviour:
   m_ObjectHideFlags: 1
@@ -384,10 +293,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 891407fbcc579b54b8ce33cf01d3d3ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  explosion: {fileID: 1419112861175572, guid: bea4eaf97a15a6c418568719bdd88da2, type: 2}
   speed: 200
+  height: 1
+  onRunway: 0
   isControllable: 0
   isControlled: 0
   randomIdleSteer: 0
+  airplaneDisabled: 0
+  foundAirport: 0
 --- !u!114 &114668136566764122
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -467,7 +381,7 @@ ParticleSystem:
   moveWithTransform: 1
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: 549751282
+  randomSeed: -906885415
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -557,7 +471,7 @@ ParticleSystem:
       serializedVersion: 2
       minMaxState: 0
       minColor: {r: 1, g: 1, b: 1, a: 1}
-      maxColor: {r: 0.72794116, g: 0.72794116, b: 0.72794116, a: 1}
+      maxColor: {r: 0.9044118, g: 0.9044118, b: 0.9044118, a: 1}
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
@@ -3753,7 +3667,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 101
   m_Sprite: {fileID: 21300000, guid: e8064aae84c650b469373cff01a47e83, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -3795,7 +3709,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 100
   m_Sprite: {fileID: 21300000, guid: 6447cdf80b9812a4d92d13e723a302ca, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -3837,7 +3751,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 102
   m_Sprite: {fileID: 21300000, guid: a92f01facb16cfd4d9d977b1a5d0052e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

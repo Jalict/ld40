@@ -45,7 +45,7 @@ public class Controller : MonoBehaviour
         float yawAxis = -Input.GetAxis("Horizontal");
         steer.x = yawAxis * yawSpeed;
 
-        airplanes[selectedAirplaneIndex].Steer(steer);
+        airplanes[selectedAirplaneIndex].Steer(steer, Input.GetKey(KeyCode.Space));
 
     }
 
