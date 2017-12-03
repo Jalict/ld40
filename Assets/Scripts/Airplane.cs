@@ -11,6 +11,7 @@ public class Airplane : MonoBehaviour {
 
     private Transform sprite;
     private Fuelmeter fuelmeter;
+    private ParticleSystem particle;
 
     private Rigidbody2D body;
 
@@ -25,10 +26,13 @@ public class Airplane : MonoBehaviour {
 
     public bool foundAirport = false;
 
+    public AudioClip landingClip;
+
 	// Use this for initialization
 	void Start () {
         sprite = transform.Find("Airplane Sprite");
         fuelmeter = transform.Find("Fuelmeter").GetComponent<Fuelmeter>();
+        particle = sprite.transform.Find("Particle").GetComponent<ParticleSystem>();
 
         body = GetComponent<Rigidbody2D>();
 
@@ -65,6 +69,16 @@ public class Airplane : MonoBehaviour {
         speed = 0f;
         Destroy(fuelmeter.gameObject);
         Destroy(body);
+        Destroy(particle);
+
+        AudioSource.PlayClipAtPoint(landingClip, transform.position, 0.5f);
+
+        StartCoroutine(Score());
+    }
+
+    IEnumerator Score()
+    {
+        yield return null;
     }
 
     void Explosion()

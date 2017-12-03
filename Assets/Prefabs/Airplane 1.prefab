@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 198616333081460118}
   - component: {fileID: 199745220257213138}
   m_Layer: 0
-  m_Name: Particle System
+  m_Name: Particle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -121,7 +121,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1088578025616410}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -10}
+  m_LocalPosition: {x: 0, y: 0, z: -5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4815982164638232}
@@ -302,6 +302,7 @@ MonoBehaviour:
   randomIdleSteer: 0
   airplaneDisabled: 0
   foundAirport: 0
+  landingClip: {fileID: 8300000, guid: d6c32d7b0b7308e4a86a6e1b21d3be38, type: 3}
 --- !u!114 &114668136566764122
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -381,7 +382,7 @@ ParticleSystem:
   moveWithTransform: 1
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: -906885415
+  randomSeed: 1538067643
   InitialModule:
     serializedVersion: 3
     enabled: 1
